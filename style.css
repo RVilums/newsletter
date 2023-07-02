@@ -1,0 +1,148 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+:root {
+  --color-tomato: hsl(4, 100%, 67%);
+  --color-dark-slate-grey: hsl(234, 29%, 20%);
+  --color-charcoal-grey: hsl(235, 18%, 26%);
+  --color-grey: hsl(231, 7%, 60%);
+  --color-white: hsl(0, 0%, 100%);
+
+  --default-fs: 16px;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: var(--color-charcoal-grey);
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(20rem, 36rem));
+  gap: 4rem;
+  background: var(--color-white);
+  padding: 2rem 2rem 2rem 6rem;
+  border-radius: 3.5rem;
+}
+
+.container {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form__heading {
+  color: var(--color-dark-slate-grey);
+  font-size: 5rem;
+  text-align: justify;
+}
+
+.form__content {
+  font-size: var(--default-fs);
+  color: var(--color-dark-slate-grey);
+}
+
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+ul {
+  list-style: none;
+  font-size: var(--default-fs);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+li {
+  position: relative;
+  font-size: var(--default-fs);
+  color: var(--color-dark-slate-grey);
+}
+
+.list__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.list__wrapper img {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-dark-slate-grey);
+  display: flex;
+  justify-content: space-between;
+}
+
+label span {
+  color: var(--color-tomato);
+}
+
+input {
+  font-family: inherit;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--color-grey);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.error {
+  border: 1px solid var(--color-tomato);
+  background: rgb(244, 169, 169);
+  color: var(--color-tomato);
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--color-dark-slate-grey);
+}
+
+.btn {
+  padding: 1.5rem 3rem;
+  font-family: inherit;
+  color: var(--color-white);
+  border: none;
+  background: var(--color-dark-slate-grey);
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: var(--color-tomato);
+}
